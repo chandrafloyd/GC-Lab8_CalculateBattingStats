@@ -1,0 +1,6 @@
+C:\Users\Owner\source\repos\Lab8-BattingAverageCalculator\Lab8-BattingAverageCalculator\bin\Debug\Lab8-BattingAverageCalculator.exe
+C:\Users\Owner\source\repos\Lab8-BattingAverageCalculator\Lab8-BattingAverageCalculator\bin\Debug\Lab8-BattingAverageCalculator.pdb
+C:\Users\Owner\source\repos\Lab8-BattingAverageCalculator\Lab8-BattingAverageCalculator\obj\Debug\Lab8-BattingAverageCalculator.csprojResolveAssemblyReference.cache
+C:\Users\Owner\source\repos\Lab8-BattingAverageCalculator\Lab8-BattingAverageCalculator\obj\Debug\Lab8-BattingAverageCalculator.csproj.CoreCompileInputs.cache
+C:\Users\Owner\source\repos\Lab8-BattingAverageCalculator\Lab8-BattingAverageCalculator\obj\Debug\Lab8-BattingAverageCalculator.exe
+C:\Users\Owner\source\repos\Lab8-BattingAverageCalculator\Lab8-BattingAverageCalculator\obj\Debug\Lab8-BattingAverageCalculator.pdb
