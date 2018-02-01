@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Lab8_BattingAverageCalculator
 {
@@ -16,18 +17,7 @@ namespace Lab8_BattingAverageCalculator
         }
 
 
-        // METHOD TO END THE GAME
-        //String Continue, EndGame;
-
-        public static bool EndTheGame(EndGame, Continue)
-        {
-           
-            if (Continue == "N")
-            {
-                EndGame = true;  //set EndGame to true in order to exit
-                Console.WriteLine("Thanks for playing! Goodbye!");
-            }
-        }
+       
 
     }
 
@@ -45,6 +35,7 @@ namespace Lab8_BattingAverageCalculator
                 int NumberOfPlayers = int.Parse(Console.ReadLine());
 
 
+
                 //GET NUMBER OF AT BATS PER PLAYER
                 Console.WriteLine("Please enter number of at-bats for each player \n");
                 int NumberOfAtBats = int.Parse(Console.ReadLine());
@@ -58,14 +49,19 @@ namespace Lab8_BattingAverageCalculator
                 for (int Row = 0; Row < NumberOfPlayers; Row++)  //for each player....
                 {
 
-                    Console.WriteLine($"Please enter number of at-bats for player[{Row + 1}]\n");       //get number of at bats per player
-
-                    NumberOfPlayers = int.Parse(Console.ReadLine());
+                   
+                  //  NumberOfPlayers = int.Parse(Console.ReadLine());
 
                     for (int Column = 0; Column < NumberOfAtBats; Column++)  //....add this many at bat stats
 
                     {
-                        float[] AtBatResults = { 0, 1, 2, 3, 4 };  //TO DO - validate so that only these 5 choices can be entered 
+                        
+                        Console.WriteLine("Please enter at bat result:");
+                        int[] AtBatResults = { 0, 1, 2, 3, 4 };  //TO DO - validate so that only these 5 choices can be entered 
+
+                      //  if (!Regex.Match(AtBatResults, @"\d{[0,4]}$").Success)  //validation
+                        //    throw new Exception(message: "Please enter 0, 1, 2, 3, or 4");
+                        
 
                         BattingStats[Row, Column] = float.Parse(Console.ReadLine()); //this collects the information for the array and puts the player in the row and the stats in the column
                     }
@@ -92,8 +88,8 @@ namespace Lab8_BattingAverageCalculator
                     }
                     Console.WriteLine($"Player{Row + 1} results are");
                     Console.WriteLine(new string('*', 20));
-                    Console.WriteLine($"The slugging average for Player{Row + 1} is {CalculateAverage(Sum1, NumberOfAtBats)}\n");
-                    Console.WriteLine($"The batting average for Player{Row + 1} is {CalculateAverage(Count, NumberOfAtBats)}\n");
+                    Console.WriteLine($"The slugging average for Player{Row + 1} is {Methods.CalculateAverage(Sum1, NumberOfAtBats)}\n");
+                    Console.WriteLine($"The batting average for Player{Row + 1} is {Methods. CalculateAverage(Count, NumberOfAtBats)}\n");
 
 
                 }
@@ -105,20 +101,19 @@ namespace Lab8_BattingAverageCalculator
                 string Continue = Console.ReadLine();
                 if (Continue == "N")
                 {
-                    EndGame = true;
-                    EndTheGame();
+                    EndGame =  true;
+                    Console.WriteLine("Thanks for playing! Goodbye!");
+                    
                 }
 
             }
         }
 
-        private static object CalculateAverage(float sum1, int numberOfAtBats)
-        {
-            throw new NotImplementedException();
-        }
-    }
+
+        
     }
 }
+
 
 
 
